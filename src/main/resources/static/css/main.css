@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+@media ( min-width : 768px) {
+	.formulario {
+		width: 385px;
+		margin: 0 auto;
+	}
+}
+
+html {
+	height: 100% !important
+}
+
+body {
+	background: #fdfdfd;
+	font-family: "HelveNeuLigCon", "Helvetica Neue", Helvetica, Arial,
+		sans-serif;
+	height: 100% !important;
+}
+
+h1, h3 {
+	color: #49176D;
+	font-weight: 200;
+}
+
+label {
+	font-size: 16px;
+	color: rgb(125, 126, 130);
+	margin-top: 0px;
+	font-weight: 200;
+	margin-bottom: 0px;
+}
+
+input[type=submit] {
+	border-radius: 4px;
+}
+
+.form-row {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	line-height: 10px;
+	padding: 0 30px;
+}
+
+.wrap-span {
+	white-space: pre-wrap; /* CSS3 */
+	white-space: -moz-pre-wrap; /* Firefox */
+	white-space: -pre-wrap; /* Opera <7 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-wrap: break-word; /* IE */
+	font-size: 16px;
+	color: #3e1151;
+	line-height: 16px;
+}
+.modal-header{
+	background-color: #3e1151!important;
+}
+.centered {
+	text-align: center;
+}
+
+.disclaimer {
+	width: 1100px;
+	text-align: justify;
+}
+
+.progress-bar {
+	background-color: #49176Da8;
+}
+
+.progress {
+	margin-top: 30px;
+	height: 40px;
+}
+/* Footer */
+.footer {
+	bottom: 0;
+	width: 100%;
+	background-color: #49176D;
+	padding-top: 15px;
+	font-size: 10px;
+	text-align: center;
+	color: #ffffff;
+	position: absolute;
+}
+
+.footer p {
+	padding: 0;
+	margin: 0;
+}
+
+.footer span {
+	color: #C1D82F;
+}
+
+.title1 {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	color: #3e1151;
+	font-size: 27px;
+	color: #3e1151;
+}
+
+.title2 {
+	font-size: 16px;
+	color: #3e1151;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	padding: 0 15px;
+}
+
+.error {
+	color: red;
+	font-size: 20px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+input[type='text'] {
+	color: #3e1151;
+	font-size: 20px;
+	border-color: #6a768633;
+}
+
+.page {
+	height: calc(100% - 40px) !important;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.nopad {
+	padding-left: 0px;
+	margin-top: 0px;
+}
+
+.button-row {
+	padding-bottom: 50px;
+}
+
+.cell-image {
+	padding-top: 70px;
+}
+
+.btn-purple {
+	color: #ffffff;
+	background-color: #3E1151;
+	border-color: #3E1151;
+	text-align: left; height : 60px;
+	background-image: url("../img/flecha_boton.png");
+	background-repeat: no-repeat;
+	background-position-x: calc(100% - 15px);
+	background-position-y: 50%;
+	height: 60px;
+	font-size:16px;
+}
+
+.btn-purple:hover, .btn-purple:focus, .btn-purple:active, .btn-purple.active,
+	.open .dropdown-toggle.btn-purple {
+	color: #ffffff;
+	background-color: #3E1151;
+	border-color: #3E1151;
+}
+
+.btn-purple:active, .btn-purple.active, .open .dropdown-toggle.btn-purple
+	{
+	background-image: url("../img/flecha_boton.png");
+	background-repeat: no-repeat;
+	background-position-x: calc(100% - 15px);
+	background-position-y: 50%;
+}
+
+.btn-purple.disabled, .btn-purple[disabled], fieldset[disabled] .btn-purple,
+	.btn-purple.disabled:hover, .btn-purple[disabled]:hover, fieldset[disabled] .btn-purple:hover,
+	.btn-purple.disabled:focus, .btn-purple[disabled]:focus, fieldset[disabled] .btn-purple:focus,
+	.btn-purple.disabled:active, .btn-purple[disabled]:active, fieldset[disabled] .btn-purple:active,
+	.btn-purple.disabled.active, .btn-purple[disabled].active, fieldset[disabled] .btn-purple.active
+	{
+	background-color: #3E1151;
+	border-color: #3E1151;
+}
+
+.btn-purple .badge {
+	color: #3E1151;
+	background-color: #ffffff;
+}

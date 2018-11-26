@@ -1,0 +1,52 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Kuspit API</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/img/icono_brujula.ico">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/css/bootstrap-dialog.min.css"/>
+	<link rel="stylesheet" th:href="@{/css/main.css}" href="../static/css/main.css"/>
+</head>
+<body>
+<div class="container">
+	<div class="formulario">
+		<div class="row"><div class="col-xs-12 centered cell-image"><img th:src="@{/img/logo_kuspit.png}" src="../static/img/logo_kuspit.png" alt="Kuspit"/></div></div>
+		<div class="row"><div class="col-xs-12 centered"><h1 class="title1">API Starter</h1></div></div>
+		<div class="row">
+			<div class="col-xs-12 datos">
+				<div class="row">
+					<div class="col-xs-12 centered">
+						<h3 class="title2">Procesando vinculación y obteniendo Token. Espera un momento por favor.</h3>
+					</div>
+				</div>
+			</div>
+				
+			<div class="col-xs-12 datos">
+				<div class="row">
+					<div class="col-xs-12 centered">
+						<div class="progress">
+						    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%"></div>
+						  </div>
+					</div>
+				</div>
+			</div>
+		</div>	
+			
+	</div>
+</div>
+<footer class="footer">
+	<div class="container">
+		<p class="disclaimer">
+			<span>Kuspit</span> es (i) una casa de bolsa en M&eacute;xico autorizada por Comisi&oacute;n Nacional Bancaria y de Valores, (ii) presta a sus clientes Servicios de Inversi&oacute;n No Asesorados en su modalidad de Ejecuci&oacute;n de Operaciones, exclusivamente respecto de valores registrados y/o listados en M&eacute;xico, (iii) no es un asesor de inversiones ni emite recomendaciones, sugerencias o propuestas de inversi&oacute;n en valores y (iv) no est&aacute; autorizada por la United States Securities and Exchange Commision (Comisi&oacute;n de Valores de los Estados Unidos de Am&eacute;rica) para organizarse y operar como broker dealer o entidad financiera en los Estados Unidos de Am&eacute;rica.
+		</p>
+	</div>
+</footer>
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/js/bootstrap-dialog.min.js"></script>
+	<script th:src="@{/js/webhook.js}" src="../static/js/webhook.js"></script>
+</body>
+</html>

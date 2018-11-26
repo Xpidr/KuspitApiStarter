@@ -1,0 +1,127 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Kuspit API</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/img/icono_brujula.ico">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/css/bootstrap-dialog.min.css"/>
+	<link rel="stylesheet" th:href="@{/css/main.css}" href="../static/css/main.css"/>
+</head>
+<body>
+<div class="page">
+	<div class="container">
+		<div class="formulario">
+			<div class="row"><div class="col-xs-12 cell-image centered"><img th:src="@{/img/logo_kuspit.png}" src="../static/img/logo_kuspit.png" alt="Kuspit"/></div></div>
+			<div class="row"><div class="datos"><h1 class="title1">API Starter</h1></div></div>
+			<div class="row"id="divForm">
+				<div class=" datos">
+					<form id="vinculacionForm" th:action="${urlApi}" action="https://api.kuspit.com" method="get">
+						<div class="row">
+							<div class="col-xs-12">
+								<h3 class="title2">Ingresa la siguiente información</h3>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 form-row">
+								<label for="idEmpresa">Identificador de Empresa</label>
+							</div>
+							<div class="col-xs-12 form-row">
+								<input class="form-control" id="idEmpresa" name="idt" type="text" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 form-row">
+								<label for="scope">Scope</label>
+							</div>
+							<div class="col-xs-12 form-row">
+								<input class="form-control" id="scope" name="scope" type="text" />
+							</div>
+						</div>
+						<input id="responseType" name="response_type" type="hidden" value="code"/>
+						<div class="row">
+							<div class="col-xs-12 form-row">
+								<label for="redirectUri">Redirect Uri</label>
+							</div>
+							<div class="col-xs-12 form-row">
+								<input class="form-control" id="redirectUri" name="redirect_uri" type="text" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 form-row">
+								<label for="clientId">Client Id</label>
+							</div>
+							<div class="col-xs-12 form-row">
+								<input class="form-control" id="clientId" name="client_id" type="text" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 form-row">
+								<label for="clientSecret">Client Secret</label>
+							</div>
+							<div class="col-xs-12 form-row">
+								<input class="form-control" id="clientSecret" name="clientSecret" type="text" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 form-row">
+								<label for="idExterno">Identificador Externo</label>
+							</div>
+							<div class="col-xs-12 form-row">
+								<input class="form-control" id="idExterno" name="idexterno" type="text" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 form-row">
+								<label for="state">State</label>
+							</div>
+							<div class="col-xs-12 form-row">
+								<input class="form-control" id="state" name="state" type="text" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 form-row button-row">
+								<input class="btn btn-purple form-control" type="submit" id="btnEnviar" value="Enviar campos" />
+							</div>
+						</div>
+					</form>
+				</div>
+
+			</div>
+			<div class="row">
+				<div id="divDatos" class="" style="display:none">
+					<div id="divResultado">
+						<div class="row"><div class="col-xs-12 form-row"><h3 class="title2 nopad">Resultado</h3></div></div>
+						<div class="row"><div class="col-xs-12 form-row"><label for="spanCode">code:</label></div><div class="col-xs-12 form-row wrap-span"><span id="spanCode">Lorem Ipsum</span></div></div>
+						<div class="row"><div class="col-xs-12 form-row"><label for="spanAccess">access_token:</label></div><div class="col-xs-12 form-row wrap-span"><span id="spanAccessToken">Lorem Ipsum</span></div></div>
+						<div class="row"><div class="col-xs-12 form-row"><label for="spanContrato">contrato:</label></div><div class="col-xs-12 form-row wrap-span"><span id="spanContrato">Lorem Ipsum</span></div></div>
+						<div class="row"><div class="col-xs-12 form-row"><label for="spanUsuario">usuario:</label></div><div class="col-xs-12 form-row wrap-span"><span id="spanUsuario">Lorem Ipsum</span></div></div>
+						<div class="row"><div class="col-xs-12 form-row"><label for="spanExpiresIn">expires_in:</label></div><div class="col-xs-12 form-row wrap-span"><span id="spanExpiresIn">Lorem Ipsum</span></div></div>
+						<div class="row"><div class="col-xs-12 form-row"><label for="spanRefreshToken">refresh_token:</label></div><div class="col-xs-12 form-row wrap-span"><span id="spanRefreshToken">Lorem Ipsum</span></div></div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 form-row button-row">
+							<input class="btn btn-purple form-control" type="submit" id="btnNuevo" value="Nuevo registro" />
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="footer">
+	<div class="container">
+		<p class="disclaimer">
+			<span>Kuspit</span> es (i) una casa de bolsa en M&eacute;xico autorizada por Comisi&oacute;n Nacional Bancaria y de Valores, (ii) presta a sus clientes Servicios de Inversi&oacute;n No Asesorados en su modalidad de Ejecuci&oacute;n de Operaciones, exclusivamente respecto de valores registrados y/o listados en M&eacute;xico, (iii) no es un asesor de inversiones ni emite recomendaciones, sugerencias o propuestas de inversi&oacute;n en valores y (iv) no est&aacute; autorizada por la United States Securities and Exchange Commision (Comisi&oacute;n de Valores de los Estados Unidos de Am&eacute;rica) para organizarse y operar como broker dealer o entidad financiera en los Estados Unidos de Am&eacute;rica.
+		</p>
+	</div>
+</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/js/bootstrap-dialog.min.js"></script>
+	<script th:src="@{/js/main.js}" src="../static/js/main.js"></script>
+</body>
+</html>
