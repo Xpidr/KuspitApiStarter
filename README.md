@@ -7,7 +7,7 @@ Este proceso se realiza de la siguiente manera:
 1.	Solicitar el registro de una empresa cuyo webhook sea http://localhost:8888/webhook (o el puerto configurado en Kuspit API Starter)
 2.	Se descarga, configura, compila y despliega la aplicación Kuspit API Starter, contenida en este repositorio.
 3.	Se accede a endpoint principal de Kuspit API Starter (http://localhost:8888) para ingresar los datos de la empresa.
-4.	Kuspit API Starter abrirá una nueva ventana del navegador con el formulario de vinculación correspondiente a los datos ingresados.
+4.	Kuspit API Starter abrirá una nueva ventana del navegador con el formulario de vinculación correspondiente a los datos ingresados. Realizar el proceso de vinculación proporcionando los datos que se solicitan en la nueva ventana.
 5.	Al final de la vinculación, la ventana de vinculación de cliente redirigirá al webhook configurado (en este caso http://localhost:8888/webhook) que estará escuchando Kuspit API Starter.
 6.	Kuspit API Starter cerrará la ventana y con los datos de la empresa y los de vinculación, obtendrá el primer token del cliente, el cual se mostrará en la ventana principal de Kuspit API Starter. Con este token se realizarán las acciones posteriores.
 
@@ -17,16 +17,15 @@ La configuración de Kuspit API Starter se encuentra en el archivo application.p
 
 Dentro del archivo mencionado se encuentran dos propiedades que se pueden configurar:
 
-•	*com.kuspit.api.url* – Corresponde al url donde se encuentra la API de Kuspit, el valor te será proporcionado una vez que se registre tu empresa y se debe de colocar de forma obligatoria. 
-•	*server.port* – Es el puerto en el cual se encuentra configurada la ejecución de Kuspit API Starter, por default el valor es 8888.
+* *com.kuspit.api.url* – Corresponde al url donde se encuentra la API de Kuspit, el valor te será proporcionado una vez que se registre tu empresa y se debe de colocar de forma obligatoria. 
+* *server.port* – Es el puerto en el cual se encuentra configurada la ejecución de Kuspit API Starter, por default el valor es 8888.
 
-El campo para el URL de la API de Kuspit deberás de ingresarlo de forma obligatoria con el que te proporcionemos. Si se quiere, se puede cambiar el puerto en el cual se desplegará la aplicación en este archivo.
+El campo para el URL de la API de Kuspit deberás de ingresarlo de forma obligatoria con la información que te proporcionemos. Si se quiere, se puede cambiar el puerto en el cual se desplegará la aplicación en este archivo.
 
 
 ### Prerequisitos
 
 Lo que se requiere para compilar el sistema es lo siguiente:
-
 
 * Conexión a internet
 * Java JDK 8 o superior
@@ -51,13 +50,12 @@ java -jar  starter-1.0.0.jar
 
 ## Uso
 
-Una vez que el sistema se ha ejecutado, como se indica en la sección anterior. Se puede acceder al mismo desde la url: http://localhost:8888 (o el puerto configurado según la siguiente sección). Al acceder a través de un navegador, nos mostrará una pantalla como la siguiente:
-
+Una vez que el sistema se ha ejecutado, como se indica en la sección anterior. Se puede acceder al mismo desde la url: http://localhost:8888 (o el puerto configurado según la siguiente sección). Al acceder a través de un navegador, nos mostrará una pantalla como la siguiente:<br/>
+<img src="http://test.kuspit.com:8080/Kuspit/img/okPortal/image001.jpg" width="50%" height="50%" />
  
 
-En esta pantalla deberemos de dar ingresar los datos de la empresa justo tal y como te los enviamos:
-
- 
+En esta pantalla deberemos de dar ingresar los datos de la empresa justo tal y como te los enviamos:<br/>
+<img src="http://test.kuspit.com:8080/Kuspit/img/okPortal/image003.png"/>
 
 Donde:
 
@@ -71,25 +69,23 @@ Donde:
 
 Una vez que se han ingresado los datos, se procederá a dar clic en el botón “Enviar campos”. Al hacerlo nos mostrará la ventana de vinculación de la API de Kuspit. Es importante mencionar que esta ventana no forma parte de Kuspit API Starter, ya que se está accediendo a la misma a través de la URL configurada en el archivo application.properties: 
 
+A partir de este punto se procederá a realizar la vinculación en la nueva ventana:
+
+a) Registra el correo del cliente a vincular:<br/>
+<img src="http://test.kuspit.com:8080/Kuspit/img/okPortal/image007.png" width="50%" height="50%" />
+ 
+b) Se enviará un código de activación al correo indicado, ingresa el mismo en esta parte:<br/>
+<img src="http://test.kuspit.com:8080/Kuspit/img/okPortal/image009.png" width="50%" height="50%" />
+
+c) Escribe una contraseña para acceder y confirma la misma:<br/>
+<img src="http://test.kuspit.com:8080/Kuspit/img/okPortal/image011.png" width="50%" height="50%" />
+ 
+d) Al dar clic al botón de vinculación se asociará el cliente a tu empresa y redirigirá al webhook que estableció al incio del proceso (http://localhost:8888/webhook), pasándo como parámetros el code y el status del cliente. Kuspit API Starter mostrará una ventana como la siguiente:<br/>
+<img src="http://test.kuspit.com:8080/Kuspit/img/okPortal/image013.png" width="50%" height="50%" />
  
 
-A partir de este punto se procederá a realizar la vinculación como se ha venido haciendo:
-
-Registro de correo:
-![enter image description here](https://kuspit.com/img/seccion_2/slide_mercados.png)
- 
-Registro código de verificación
- ![enter image description here](https://kuspit.com/img/seccion_2/slide_mercados.png)
-
-Registro de contraseña
-![enter image description here](https://kuspit.com/img/seccion_2/slide_mercados.png)
- 
-En esta parte al dar clic al botón de vincular, al terminar la vinculación se mostrará una ventana como la siguiente:
-![enter image description here](https://kuspit.com/img/seccion_2/slide_mercados.png)
- 
-
-Esta ventana se mostrará durante el tiempo que tome el realizar la petición de primer Token. Al final del proceso se cerrará y se regresará a la ventana principal de Kuspit API Starter, en donde se mostrarán los datos generados durante la vinculación y la obtención de primer token del cliente y que serán utilizados para las siguientes operaciones de consumo de la API.
-![enter image description here](https://kuspit.com/img/seccion_2/slide_mercados.png)
+Esta ventana permanecerá durante el tiempo que tome el realizar la petición de primer Token. Al final del proceso se cerrará y se regresará a la ventana principal de Kuspit API Starter, en donde se mostrarán los datos generados durante la vinculación y la obtención de primer token del cliente, éstos serán los que se utilicen para realizar las operaciones de consumo de la API:<br/>
+<img src="http://test.kuspit.com:8080/Kuspit/img/okPortal/image015.png" width="50%" height="50%" />
 
 ## Construido con
 
@@ -108,6 +104,6 @@ Version 1.0 - Primera versión del sistema.
 
 ## Licencia
 
-Este proyecto está licenciado bajo la licencia MIT - ver el archivo LICENCE.md para más detalles.
+Este proyecto está licenciado bajo la licencia MIT - ver el archivo LICENSE.md para más detalles.
 
 
