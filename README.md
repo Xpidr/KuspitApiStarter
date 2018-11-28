@@ -52,6 +52,7 @@ Una vez que el sistema se ha ejecutado como se indica en la sección anterior, s
  
 
 En esta pantalla deberemos de dar ingresar los datos de la empresa justo tal y como te los enviamos:<br/>
+
 <img src="http://test.kuspit.com:8080/Kuspit/img/okPortal/image003.png"/>
 
 Donde:
