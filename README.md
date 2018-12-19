@@ -1,4 +1,4 @@
-# Kuspit API Starter
+# Kuspit API Starter 
 
 Kuspit API Starter es un sistema que permite realizar la vinculación de un cliente a Kuspit Casa de Bolsa, siendo esta la primera parte que se deberá realizar para poder consumir los servicios de la api.
 
@@ -74,13 +74,13 @@ A partir de este punto se procederá a realizar la vinculación en la nueva vent
 a) Registra el correo del cliente a vincular:<br/>
 
 <p align="center">
-<img src="http://test.kuspit.com:8080/Kuspit/img/okPortal/image007.png" width="50%" height="50%" />
+<img src="http://test.kuspit.com:8080/Kuspit/img/okPortal/image007n.png" width="50%" height="50%" />
 </p>
 
 b) Se enviará un código de activación al correo indicado, ingresa el mismo en esta parte:<br/>
 
 <p align="center">
-<img src="http://test.kuspit.com:8080/Kuspit/img/okPortal/image009.png" width="50%" height="50%"/>
+<img src="http://test.kuspit.com:8080/Kuspit/img/okPortal/image009n.png" width="50%" height="50%"/>
 </p>
 
 c) Escribe una contraseña para acceder y confirma la misma:<br/>
