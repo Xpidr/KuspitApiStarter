@@ -18,7 +18,7 @@ $("#btnEnviar").on("click",function(e){
 			+"&scope="+$("#scope").val()
 			+"&response_type="+ $("#responseType").val()
 			+"&redirect_uri="+ $("#redirectUri").val()
-			+"&client_id="+ $("#clientId").val()
+			+"&client_id="+ encodeURIComponent($("#clientId").val())
 			+"&idexterno="+ $("#idExterno").val()
 			+"&state="+ $("#state").val();
 		
