@@ -32,9 +32,9 @@ $("#btnEnviar").on("click",function(e){
 			scope: $("#scope").val(),
 			responseType: $("#responseType").val(),
 			redirectUri: $("#redirectUri").val(),
-			clientId: $("#clientId").val(),
+			clientId: encodeURIComponent($("#clientId").val()),
 			idExterno: $("#idExterno").val(),
-			clientSecret: $("#clientSecret").val(),
+			clientSecret: encodeURIComponent($("#clientSecret").val()),
 			state: $("#state").val()
 		});
 	}
