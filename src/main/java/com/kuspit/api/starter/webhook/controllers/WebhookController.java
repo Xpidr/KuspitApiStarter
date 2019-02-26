@@ -90,7 +90,7 @@ public class WebhookController {
 			logger.info("Poniendo datos de token en la sesión");
 			//Guarda el Token en la sesión
 			session.setAttribute("tokenInfo", tokenInfomationVo);
-			
+			session.removeAttribute("error");
 		} catch (Exception e) {
 			//En caso de que haya habido algún error, lo pone en la sesión con la etiqueta 'error'
 			e.printStackTrace();
