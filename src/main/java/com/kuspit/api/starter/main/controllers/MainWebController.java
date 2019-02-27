@@ -1,5 +1,7 @@
 package com.kuspit.api.starter.main.controllers;
 
+import java.net.URLEncoder;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -105,8 +107,8 @@ public class MainWebController {
 		vinculacionDataVo.setScope(scope);
 		vinculacionDataVo.setResponseType(responseType);
 		vinculacionDataVo.setRedirectUri(redirectUri);
-		vinculacionDataVo.setClientId(clientId);
-		vinculacionDataVo.setClientSecret(clientSecret);
+		vinculacionDataVo.setClientId(URLEncoder.encode(clientId));		//Viene codificado desde el Front, se decodificará aquí
+		vinculacionDataVo.setClientSecret(URLEncoder.decode(clientSecret));	//Viene codificado desde el Front, se decodificará aquí
 		vinculacionDataVo.setIdExterno(idExterno);
 		vinculacionDataVo.setState(state);
 		
