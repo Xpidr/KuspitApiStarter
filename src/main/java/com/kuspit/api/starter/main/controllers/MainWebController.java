@@ -107,8 +107,8 @@ public class MainWebController {
 		vinculacionDataVo.setScope(scope);
 		vinculacionDataVo.setResponseType(responseType);
 		vinculacionDataVo.setRedirectUri(redirectUri);
-		vinculacionDataVo.setClientId(URLEncoder.encode(clientId));		//Viene codificado desde el Front, se decodificará aquí
-		vinculacionDataVo.setClientSecret(URLEncoder.decode(clientSecret));	//Viene codificado desde el Front, se decodificará aquí
+		vinculacionDataVo.setClientId(URLDecoder.decode(clientId));		//Viene codificado desde el Front, se decodificará aquí
+		vinculacionDataVo.setClientSecret(URLDecoder.decode(clientSecret));	//Viene codificado desde el Front, se decodificará aquí
 		vinculacionDataVo.setIdExterno(idExterno);
 		vinculacionDataVo.setState(state);
 		
@@ -117,8 +117,8 @@ public class MainWebController {
 		logger.info("scope: " + scope);
 		logger.info("responseType: " + responseType);
 		logger.info("redirectUri: " + redirectUri);
-		logger.info("clientId: " + clientId);
-		logger.info("clientSecret: " + clientSecret);
+		logger.info("clientId: " + URLDecoder.decode(clientId));
+		logger.info("clientSecret: " + URLDecoder.decode(clientSecret));
 		logger.info("idExterno: " + idExterno);
 		logger.info("state: " + state);
 		
