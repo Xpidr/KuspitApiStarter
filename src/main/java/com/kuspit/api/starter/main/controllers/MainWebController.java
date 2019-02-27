@@ -1,6 +1,6 @@
 package com.kuspit.api.starter.main.controllers;
 
-import java.net.URLEncoder;
+import java.net.URLDecoder;
 
 import java.util.HashMap;
 import java.util.Map;
