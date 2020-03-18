@@ -1,6 +1,6 @@
 # Kuspit API Starter 
 
-Kuspit API Starter es un sistema que permite realizar la vinculación de un cliente a Kuspit Casa de Bolsa, siendo esta la primera parte que se deberá realizar para poder consumir los servicios de la api.
+Kuspit API Starter es un sistema que permite realizar la vinculación de un cliente a Kuspit Casa de Bolsa, siendo ésta la primera parte que se deberá realizar para poder consumir los servicios de la api.
 
 A continuación se explican los pasos a realizar para el proceso de vinculación:
 
@@ -8,7 +8,7 @@ A continuación se explican los pasos a realizar para el proceso de vinculación
 2.	Se descarga, configura, compila y despliega la aplicación Kuspit API Starter, contenida en este repositorio.
 3.	Se accede al endpoint principal de Kuspit API Starter (http://localhost:8888) para ingresar los datos de la empresa.
 4.	Kuspit API Starter abrirá una nueva ventana del navegador con el formulario de vinculación correspondiente a los datos ingresados, a continuación se deberá realizar el proceso de vinculación proporcionando los datos solicitados.
-5.	En el punto funal la ventana de vinculación de cliente redirigirá al webhook configurado (en este caso http://localhost:8888/webhook) que estará escuchando Kuspit API Starter.
+5.	En el punto final la ventana de vinculación de cliente redirigirá al webhook configurado (en este caso http://localhost:8888/webhook) que estará escuchando Kuspit API Starter.
 6.	Kuspit API Starter cerrará la ventana y con los datos de la empresa y los de vinculación, obtendrá el primer token de acceso del cliente, el cual se mostrará en la ventana principal, con este token se realizarán las acciones posteriores.
 
 ## Configuración
