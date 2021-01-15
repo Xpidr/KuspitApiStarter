@@ -50,12 +50,12 @@ java -jar  starter-1.0.0.jar
 Una vez que el sistema se ha ejecutado como se indica en la sección anterior, se podrá acceder en la url: http://localhost:8888 (o el puerto configurado según la siguiente sección). Al acceder a través de un navegador, nos mostrará una pantalla como la siguiente:<br/>
 
 <p align="center">
-<img src="http://test.kuspit.com:8080/kuspit/img/okPortal/image001.jpg" width="50%" height="50%" style="text-align:center" />
+<img src="https://test.kuspit.com:8080/kuspit/img/okPortal/image001.jpg" width="50%" height="50%" style="text-align:center" />
 </p>
 
 En esta pantalla deberemos de dar ingresar los datos de la empresa justo tal y como te los enviamos:<br/>
 
-<img src="http://test.kuspit.com:8080/kuspit/img/okPortal/image003.png" style="text-align:center"/>
+<img src="https://test.kuspit.com:8080/kuspit/img/okPortal/image003.png" style="text-align:center"/>
 
 Donde:
 
@@ -74,31 +74,31 @@ A partir de este punto se procederá a realizar la vinculación en la nueva vent
 a) Registra el correo del cliente a vincular:<br/>
 
 <p align="center">
-<img src="http://test.kuspit.com:8080/kuspit/img/okPortal/image007.png?img=1" width="50%" height="50%" />
+<img src="https://test.kuspit.com:8080/kuspit/img/okPortal/image007.png?img=1" width="50%" height="50%" />
 </p>
 
 b) Se enviará un código de activación al correo indicado, ingresa el mismo en esta parte:<br/>
 
 <p align="center">
-<img src="http://test.kuspit.com:8080/kuspit/img/okPortal/image009.png?img=1" width="50%" height="50%"/>
+<img src="https://test.kuspit.com:8080/kuspit/img/okPortal/image009.png?img=1" width="50%" height="50%"/>
 </p>
 
 c) Escribe una contraseña para acceder y confirma la misma:<br/>
 
 <p align="center">
-<img src="http://test.kuspit.com:8080/kuspit/img/okPortal/image011.png" width="50%" height="50%" />
+<img src="https://test.kuspit.com:8080/kuspit/img/okPortal/image011.png" width="50%" height="50%" />
 </p>
 
 d) Al dar clic al botón de vinculación se asociará el cliente a tu empresa y redirigirá al webhook que estableció al incio del proceso (http://localhost:8888/webhook), pasándo como parámetros el code y el status del cliente. Kuspit API Starter mostrará una ventana como la siguiente:<br/>
 
 <p align="center">
-<img src="http://test.kuspit.com:8080/kuspit/img/okPortal/image013.png" width="50%" height="50%" />
+<img src="https://test.kuspit.com:8080/kuspit/img/okPortal/image013.png" width="50%" height="50%" />
 </p>
 
 Esta ventana permanecerá durante el tiempo que tome el realizar la petición de primer Token. Al final del proceso se cerrará y se regresará a la ventana principal de Kuspit API Starter, en donde se mostrarán los datos generados durante la vinculación y la obtención de primer token del cliente, éstos serán los que se utilicen para realizar las operaciones de consumo de la API:<br/>
 
 <p align="center">
-<img src="http://test.kuspit.com:8080/kuspit/img/okPortal/image015.png" width="50%" height="50%" />
+<img src="https://test.kuspit.com:8080/kuspit/img/okPortal/image015.png" width="50%" height="50%" />
 </p>
 
 ## Construido con
